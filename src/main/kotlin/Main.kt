@@ -125,8 +125,12 @@ fun main(args: Array<String>) {
 
     // Lambda expression
     // Lambda Expressions
-    // One of the most common thing in functional languages is the possibilty to use functions as variables, meaning to pass a function as a parameter to another function, or to return a function as a returned value
+    // One of the most common thing in functional languages is the possibilty to use functions as variables,
+    // meaning to pass a function as a parameter to another function, or to return a function as a returned value
     val lambda = { a: Int, b: Int -> a + b }
+
+    println("Lambda function " + lambda(4, 5))
+    println(lambda(3, 2) + lambda(1, 2))
 
 
     // Null safety
