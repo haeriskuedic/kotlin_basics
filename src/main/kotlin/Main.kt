@@ -1,3 +1,5 @@
+import java.lang.Exception
+
 fun main(args: Array<String>) {
     // printing lines
     println("*******")
@@ -146,6 +148,39 @@ fun main(args: Array<String>) {
 
     // if the object is null, it returns null, otherwise it executes the intended command
     var len = z2?.length
+
+
+    // user input
+    //val userInput = readLine()?.toInt()
+    val userInput = readlnOrNull()?.toInt()
+    //var iInt = userInput.toInt()
+    println("your input $userInput")
+
+    /*
+    Operators - Assignment
+    = Assignment
+    $ Reference
+    ${ } Reference expression
+     */
+    if (userInput != null) {
+        println("this is a reference expression ${userInput * userInput!!}")
+    }
+
+    // exception
+    var test = readLine()
+    try {
+        println(test?.toInt())
+    } catch (e: Exception) {
+        e.printStackTrace()
+        println("An exception happened \n ${e.localizedMessage}")
+    } finally {
+        // finally wird immer ausgeführt
+        println("The execution has completed")
+    }
+
+    // throw
+    var test2 = readLine()
+    throw IllegalStateException("I dont like this Input")
 }
 
 // Function definition:
