@@ -88,4 +88,7 @@ fun main(args: Array<String>) {
 
     count3.remove(2)
     println(count3)
+
+    for (pairs in count3)
+        println("in $pairs")
 }
